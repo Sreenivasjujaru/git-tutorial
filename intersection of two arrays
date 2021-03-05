@@ -1,0 +1,40 @@
+Given two arrays, write a function to compute their intersection.
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+ 
+Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Note:
+Each element in the result must be unique.
+The result can be in any order.
+
+solution:-
+
+def printIntersection(arr1, arr2, n1, n2):
+    hs = set()
+    #  Insert the elements of arr1[] to set S
+    for i in range(0, n1):
+        hs.add(arr1[i])
+    
+    for i in range(0, n2):
+        #  If element is present in set then
+        #  push it to vector V
+        if arr2[i] in hs:
+            print(arr2[i], end=" ")
+ 
+ 
+
+arr1=[]
+arr2=[]
+n1 = int(input("Enter number of elements :")) 
+for i in range(0, n1): 
+    ele = int(input()) 
+    arr1.append(ele)
+n2 = int(input("Enter number of elements :")) 
+for i in range(0, n2): 
+    ele = int(input()) 
+    arr2.append(ele)
+n1 = len(arr1)
+n2 = len(arr2)
